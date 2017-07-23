@@ -1,0 +1,30 @@
+.add-todo-container {
+  width: 40%;
+  float: left;
+  height: 98%;
+  display: inline-block;
+  box-shadow: 3px -5px 3px 3px rgba(0,0,0,.1);
+}
+
+.add-todo-container textarea {
+  display: block;
+  width: 90%;
+  margin: 2px auto 10px;
+  height: 180px;
+  border-radius: 3px;
+  background: #f7f7f7;
+  border: 1px solid #e8e8e8;
+}
+
+.add-todo-container button {
+  border: 1px solid #7286f0;
+  background: #7286f0;
+  color: white;
+  width: 90%;
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}

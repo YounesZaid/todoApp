@@ -1,0 +1,28 @@
+.todo-list-container {
+  height: 100%;
+  width: 60%;
+  display: inline-block;
+  float: left;
+  overflow: auto;
+}
+
+.todo-list-container .empty {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.todo-list-container .todo-item {
+  background: white;
+  font-size: 15px;
+  padding: 10px;
+  width: 92%;
+  margin: 2px auto 10px;
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.todo-list-container .todo-item .zmdi-delete {
+  float: right;
+  text-decoration: none;
+  color: #fc7489;
+}
