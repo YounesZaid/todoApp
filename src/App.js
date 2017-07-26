@@ -30,6 +30,7 @@ export default class App extends Component {
   constructor(props, context) {
     super(props, context);
     this._deleteItem = this._deleteItem.bind(this);
+    this._addItem = this._addItem.bind(this);
     this.state = {
       todos: _defaultTodos
     }
@@ -47,13 +48,29 @@ export default class App extends Component {
       todos: newArray
     })
   }
+
+  _addItem(text) {
+    let todoItem = {
+      id: Math.round(Math.random() * 100),
+      text: text
+    }
+    let newArray = [];
+    this.state.todos.forEach((element, index) => {
+      newArray.push(element);
+    });
+    newArray.push(todoItem);
+    this.setState({
+      todos: newArray
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <LogoContainer />
         <div className="sub-container">
           <TodoListContainer todosList={this.state.todos} deleteTodoItem={this._deleteItem} />
-          <AddTodoContainer />
+          <AddTodoContainer addTodoItem={this._addItem} />
         </div>
       </div>
     )
